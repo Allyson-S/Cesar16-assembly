@@ -1,0 +1,18 @@
+MOV 1024,R0
+MOV #1032, 1026
+MOV 1026, R1
+CLR 1028
+CLR 1030
+teste:TST R0
+BEQ fim
+MOV (R1), 1030
+CMP 1030, 1028
+BGT atribuicao
+DEC R0
+ADD #2, R1
+JMP teste
+atribuicao:MOV 1030, 1028
+DEC R0
+ADD #2, R1
+JMP teste
+fim:HLT

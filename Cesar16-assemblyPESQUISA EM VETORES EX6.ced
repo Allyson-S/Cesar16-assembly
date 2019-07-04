@@ -1,0 +1,16 @@
+MOV #3, 1024
+MOV 1024, R0
+MOV #1032, 1026
+MOV 1026, R1
+MOV #4, 1028
+teste:TST R0
+BEQ fim
+CMP (R1)+, 1028
+BEQ confirma
+DEC R0
+JMP teste
+confirma:SUB #2, R1
+MOV R1, 1030
+
+fim:HLT
+

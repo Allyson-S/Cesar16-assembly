@@ -1,0 +1,12 @@
+MOV #3, 1024
+MOV 1024, R0
+MOV #1028, 1026
+MOV 1026, R1
+loop: TST R0
+BEQfim
+MOV #0, (R1)
+ADD #2, R1
+DEC R0
+JMP loop
+MOV #0 1026
+fim:HLT
